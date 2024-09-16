@@ -3,23 +3,28 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>QR code component</title>
+        <title>QR Code Card</title>
+        <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Icon for page -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <!-- CSS styles -->
+        <link rel="stylesheet" href="styles.css">    
     </head>
 
     <body>
-        <div class="qr__intro">
+        <main>
             <div class="qr__item">
-                <div class="qr__code">
-                    <img class="qr__image" src="image-qr-code.png" alt="QR code leading to Frontend Mentor website">
-                </div>
-                <div class="qr__info">
-                    <h4 class="qr__title">Improve your front-end skills by building projects</h4>
-                    <p class="qr__text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-                </div>
+                <img class="qr__image" src="image-qr-code.png" alt="QR code leading to Frontend Mentor website">
+                <h1 class="qr__title">Improve your front-end <br>skills by building projects</h1>
+                <p class="qr__text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
             </div>
-        </div>
+        </main>
+        <footer class="qr-footer">
+            My First <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Challenge</a> by Frontend Mentor.
+            Created by <a href="https://github.com/Grimm-N">Grimm-N</a>.
+        </footer>
     </body>
 </html>
