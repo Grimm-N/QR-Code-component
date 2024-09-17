@@ -1,44 +1,106 @@
-/* General */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* Prevent font size inflation */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 /* Body */
 body {
     background-color: #D5E1EF;
     font-family: "Outfit", sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 /* Container */
 .qr__item {
-    max-width: 320px;
-    height: auto;
+    max-width: 20rem;
+    height: 31.25rem;
     background-color: #fff;
     padding: 1rem 1rem 2.5rem;
-    text-align: center;
     border-radius: 20px;
 }
 
 /* QR code img */
 .qr__image {
-    width: 288px;
-    height: 288px;
+    max-width: 100%;
+    width: 18rem;
+    height: 18rem;
     border-radius: 10px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -47,7 +109,7 @@ body {
 .qr__title {
     color: #1F314F;
     font-size: 1.4rem;
-    max-width: 256px;
+    max-width: 16rem;
     padding: 1.5rem 0 1rem;
     font-weight: 700;
     margin: 0 auto;
@@ -56,20 +118,18 @@ body {
 .qr__text {
     font-size: 1rem;
     font-weight: 400;
-    max-width: 256px;
+    max-width: 16rem;
     color: #68778D;
     margin: 0 auto;
 }
 
 /* Footer */
 .qr__footer {
-    color: #68778D;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+    color: #D5E1EF;
+    font-size: 0.5rem;
 }
 
 .qr__footer a {
     text-decoration: none;
-    color: #fff;
+    color: #D5E1EF;
 }
